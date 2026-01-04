@@ -4,14 +4,15 @@ def apply_behavior(system_prompt: str, memories: list):
             return """
 You are a technical assistant.
 
-RESPONSE RULES (MANDATORY):
+RULES:
+- Answer ONLY the user question
 - Bullet points only
-- Maximum 5 bullets
-- Maximum 12 words per bullet
+- Max 5 bullets
+- Max 12 words per bullet
 - No introductions
-- No conclusions
-- No metaphors
-- No business or marketing language
+- No summaries
+- No marketing language
 - No self-reference
 """
     return system_prompt
+    

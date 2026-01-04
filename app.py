@@ -31,14 +31,19 @@ while True:
 
     # 3️⃣ Build final prompt
     prompt = f"""
-{system_prompt}
+    ### SYSTEM
+    {system_prompt}
 
-Relevant memory:
-{chr(10).join(memories)}
+    ### MEMORY
+    {chr(10).join(memories)}
 
-User: {user_input}
-Assistant:
-"""
+    ### USER
+    {user_input}
+
+    ### ANSWER
+    """
+
+
 
     # 4️⃣ Generate response
     response = generate(prompt)
